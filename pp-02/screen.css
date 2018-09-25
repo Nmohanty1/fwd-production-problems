@@ -1,0 +1,24 @@
+.container {
+  display:grid;
+  grid-template-columns: auto auto;
+  background-color: #FFE4C4;
+  padding: 10px;
+  grid-template-areas:
+    "main, main, main, main"
+    "footer, footer, foorer, footer"
+}
+.item {
+  background-color: #000000;
+  border: 1px solid #fff;
+  padding: 20px;
+  font-size: 30px;
+  text-align:center;
+}
+
+.item1, .item5 {
+  grid-column: 1/3;
+}
+
+.item{
+  align-self: start | end;
+}
