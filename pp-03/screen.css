@@ -10,18 +10,26 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* ===== BASE STYLES ===== */
 
 /* ==== MODULAR STYLES === */
+#content{
+ display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 #three,
 #two,
 #one {
   color: white;
 }
 #three {
+  order:3;
   background-color: purple;
 }
 #two {
+  order:2;
   background-color: green;
 }
 #one {
+  order:1;
   background-color: red;
 }
 
@@ -31,16 +39,38 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 }
 
-#three,
-#two,
-#one {
+
+@media screen and (min-width: 600px){
+#content{
+  display: flex;
+  flex-direction:row wrap;
+}
+#three{
+width:100vw;
+height:50vw;
 
 }
-
-@media screen and (min-width: 600px) {
-
+#two{
+  width:50vw;
+  height:50vw;
 }
+#one{
+  width:50vw;
+  height:50vw;
+}
+}
+
 
 @media screen and (min-width: 800px) {
-
+  #content {
+    flex-wrap: nowrap;
+     display: flex;
+     flex-direction: row;
+   }
+    #three,
+    #two,
+    #one {
+      height: 80vw;
+      width: 80vw;
+  }
 }
