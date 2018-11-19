@@ -38,6 +38,10 @@ console.log(i) // should be 'undefined', not 3
 //  variable x declared on line 5 above. Write your explanation
 //  as JavaScript comments.
 
+//This function declares x as a local variable within the function
+//this allows the function to not modify the global variable.
+//When the function gets called it returns the x value to the function
+
 function addTwo(x) {
   x = x + 2;
   return x;
