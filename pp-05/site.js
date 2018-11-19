@@ -4,8 +4,9 @@
 
 var x = 5;
 
+x === window.x;
 function double(num) {
-  x = num * 2;
+  x = num - 1;
   return x;
 }
 
